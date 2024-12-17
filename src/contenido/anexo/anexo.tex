@@ -1,0 +1,24 @@
+\chapter{Anexo}\label{ch:anexo}
+
+% Definir un nuevo contador para los anexos
+\newcounter{anexo}
+\setcounter{anexo}{0} % Iniciar el contador en 0
+
+% Configurar el formato de los títulos para incluir el prefijo de anexo
+\newcommand{\anexoprefix}[1]{%
+  \refstepcounter{anexo}% Incrementa el contador de anexos
+  \thesection\ Anexo \arabic{anexo} - #1% Formato del título
+}
+
+% Antes de iniciar los anexos, cambia el formato de los títulos de sección
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {}{0em}
+  {\anexoprefix}
+
+
+\input{contenido/anexo/secciones/prueba}
+
+
+
+   

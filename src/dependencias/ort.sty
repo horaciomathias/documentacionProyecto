@@ -1,0 +1,33 @@
+\ProvidesPackage{dependencias/ort}
+\usepackage{float}
+
+\newcommand*{\titulo}[1]{\gdef\@titulo{#1}}
+\newcommand*{\@titulo}{Ingeniero en Sistemas}
+
+\newcommand*{\docente}[1]{\gdef\@docente{#1}}
+\newcommand*{\@docente}{Juan Pablo Russo}
+
+\newcommand{\ignore}[1] {#1}
+
+\renewcommand*{\maketitle}{
+    \begin{titlepage}
+        \centering{
+            \LARGE Universidad ORT Uruguay \par}
+        \vspace{0.5cm}
+        {\Large Facultad de Ingenier\'{i}a \par}
+        \vspace{2cm}
+        {\huge\bfseries\@title\unskip\strut\par}
+        \vspace{1.5cm}
+        {\Large Entregado como requisito para la obtención del título de     \@titulo\unskip\strut\par}
+
+        \vspace{1cm}
+
+        \vfill
+        {\Large\@author\unskip\strut\par}
+        \vfill
+        {\Large Tutor: \@docente\par}
+        {\Large 2024\par}
+        \vspace{1cm}
+    \end{titlepage}
+}
+\endinput

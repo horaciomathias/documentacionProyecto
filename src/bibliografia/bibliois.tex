@@ -1,0 +1,71 @@
+\usepackage[
+    style=ieee,
+    backend=biber,
+    sorting=none
+]{biblatex}
+
+\DeclareFieldFormat{url}{[Online]. Available\addcolon\space\url{#1}}
+\DefineBibliographyStrings{english}{
+  urlseen = {Accessed on},
+}
+
+\DeclareFieldFormat{urldate}{%
+  \bibstring{urlseen}%
+  \addcolon\space%
+  \ifcase\thefield{urlmonth}\or
+  Jan.\or Feb.\or Mar.\or Apr.\or May\or Jun.\or
+  Jul.\or Aug.\or Sep.\or Oct.\or Nov.\or Dec.\fi% Hardcodeado
+  \addspace%
+  \thefield{urlday}%
+  \addcomma\addspace%
+  \thefield{urlyear}%
+}
+
+\DefineBibliographyExtras{english}{
+  \protected\def\mkbibmonth#1{%
+    \ifcase#1\or
+    Enero\or Febrero\or Marzo\or Abril\or Mayo\or Junio\or
+    Julio\or Agosto\or Septiembre\or Octubre\or Noviembre\or Diciembre\fi}
+}
+
+\DeclareBibliographyDriver{online}{
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/editor+others/translator+others}%
+  \setunit{\labelnamepunct}\newblock
+  \printfield{title}%
+  \printtext{,}% Inserta la coma inmediatamente después del título
+  \iffieldundef{year}
+    {}
+    {\printtext{\addspace}%
+     \printfield{month}\space\printfield{year}\addperiod}%
+  \newunit\newblock
+  \printfield{note}%
+  \newunit\newblock
+  \printlist{organization}%
+  \newunit\newblock
+  \printfield{version}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \printfield{howpublished}%
+  \newunit\newblock
+  \printfield{type}%
+  \newunit\newblock
+  \printfield{doi}%
+  \newunit\newblock
+  \printfield{url}%
+  \newunit\newblock
+  \printfield{urldateprefix}%
+  \usebibmacro{urldate}%
+  \usebibmacro{finentry}%
+}
+
+
+
+
+
+\addbibresource{./bibliografia/bibliois.bib}
+\appto{\bibsetup}{\sloppy}

@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{report}
+
+\input{dependencias/dependencias}
+\input{bibliografia/bibliois}   
+\input{estilos/estilos}
+
+\title{Titulo} % TODO
+% textidote: ignore begin
+\author{Estudiante 1 - 000000\\ % TODO
+Estudiante 2 - 000000 \\
+Estudiante 3 - 000000\\
+Estudiante 4 - 000000\\
+Estudiante 5 - 000000}
+% textidote: ignore end
+
+
+\input{contenido/glosario}
+
+
+\begin{document}
+    \maketitle
+    % textidote: ignore begin
+    \addtocounter{page}{1}
+    % textidote: ignore end
+
+    \include{contenido/declaracion-de-autoria}
+
+    \include{contenido/agradecimientos}
+    \include{contenido/abstract}
+    \include{contenido/palabras-clave}
+
+    % textidote: ignore begin
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{-10}}
+    \clearpage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Glosario}
+    \setglossarystyle{mylist}
+    \printglossary[title={\-\hspace{18pt}Glosario}]
+    \glsaddall
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{2}} % Restaurar el valor original de tocdepth
+    % textidote: ignore end
+
+    \renewcommand{\contentsname}{Índice}
+    % textidote: ignore begin
+    \tableofcontents
+    % textidote: ignore end
+
+    \include{contenido/indice}
+
+    % textidote: ignore begin
+    \addcontentsline{toc}{chapter}{Referencias bibliográficas}
+    \printbibliography[title=Referencias bibliográficas]
+
+    \nocite{*} % tiene que ir despues de printbiblio para q se ordene la bibliografia
+
+    \input{contenido/anexo/anexo}
+
+    % textidote: ignore end
+
+\end{document}
