@@ -18,3 +18,8 @@ Para compilar el PDF usar:
 ```shell
 make compile
 ```
+
+Instalar Miktek ->  https://miktex.org/download
+Instalar Strawberry Perl -> https://strawberryperl.com/
+
+Polacode -> para sacar capturas de código
