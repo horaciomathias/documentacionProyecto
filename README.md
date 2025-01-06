@@ -22,4 +22,9 @@ make compile
 Instalar Miktek ->  https://miktex.org/download
 Instalar Strawberry Perl -> https://strawberryperl.com/
 
+Extensiones útiles para Visual Studio Code:
+```
 Polacode -> para sacar capturas de código
+Spell Right -> para corrección ortográfica
+Tabnine -> para autocompletado (opcional)
+```
