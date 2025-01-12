@@ -1,0 +1,133 @@
+\section{Selección de Tecnologías}}\label{sec:seleccionDeTecnologias}
+
+En esta sección se describe el proceso de selección de tecnologías para el desarrollo del Sistema de gestión de incidentes de búsqueda y rescate en el mar (MRCC). 
+La selección se basó en diversos criterios relevantes para asegurar que las tecnologías elegidas sean adecuadas para los requisitos del proyecto, ofrezcan un rendimiento óptimo y 
+faciliten el desarrollo y mantenimiento del sistema por parte del equipo.
+
+\subsection{Método de ponderación}
+
+Para evaluar las tecnologías disponibles, se utilizó un método de ponderación que asigna puntajes a diferentes aspectos críticos de cada tecnología. Los puntajes se asignan en una escala de 0 a 10, 
+distribuidos en las siguientes categorías:
+
+\begin{itemize}
+    \item Nula: 0 puntos
+    \item Baja: 1-3 puntos
+    \item Media: 4-6 puntos
+    \item Alta: 7-10 puntos
+\end{itemize}
+
+Los aspectos evaluados incluyen:
+
+\begin{itemize}
+    \item Madurez de la tecnología: Tiempo y adopción en el mercado.
+    \item Documentación disponible: Calidad y cantidad de documentación en línea.
+    \item Curva de aprendizaje: Facilidad de aprendizaje y tiempo necesario para adquirir competencia.
+    \item Experiencia previa: Nivel de experiencia del equipo con la tecnología, tanto académica como laboral.
+\end{itemize}
+
+
+Para la construcción del backend de nuestra solución web, se consideraron las siguientes tecnologías:
+
+\subsubsection{.Net}
+Madurez: Alta. .Net es una plataforma ampliamente adoptada y establecida en el mercado.
+Documentación: Alta. Existe una vasta cantidad de documentación y recursos en línea.
+Curva de aprendizaje: Media. La plataforma es robusta y puede requerir un tiempo considerable para dominarla completamente.
+Experiencia previa: Media. Algunos miembros del equipo tienen experiencia académica y profesional con .Net.
+
+\subsubsection{Next.js}
+Madurez: Alta. Next.js ha sido adoptado por una gran cantidad de desarrolladores y empresas.
+Documentación: Alta. La documentación oficial y los recursos comunitarios son extensos.
+Curva de aprendizaje: Baja. Next.js es conocido por su facilidad de uso y rápida curva de aprendizaje.
+Experiencia previa: Alta. Todos los miembros del equipo tienen experiencia previa en JavaScript y frameworks relacionados.
+
+\subsubsection{Comparación de tecnologías}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Tecnología} & \textbf{Madurez} & \textbf{Documentación} & \textbf{Curva de aprendizaje} & \textbf{Experiencia previa} \\ \hline
+    .Net                & Alta            & Alta                   & Media                        & Media                     \\ \hline
+    Next.js             & Alta            & Alta                   & Baja                         & Alta                      \\ \hline
+    \end{tabular}
+    \caption{Comparación de tecnologías}
+    \label{tab:comparacionTecnologias}
+\end{table}
+
+\subsubsection{Decisión final}
+Se decidió utilizar Next.js para el desarrollo del backend debido a su facilidad de uso, amplia documentación y la experiencia 
+previa del equipo, lo que reduce el riesgo de implementación y permite un desarrollo más ágil.
+
+
+\subsection{Base de Datos}
+
+Para la selección del sistema de base de datos, se consideraron las siguientes opciones:
+
+\subsubsection{PostgreSQL}
+Madurez: Alta. PostgreSQL es una base de datos relacional muy estable y ampliamente utilizada.
+Documentación: Alta. La documentación oficial y los recursos comunitarios son extensos.
+Curva de aprendizaje: Media. Requiere conocimientos de SQL y manejo de bases de datos relacionales.
+Experiencia previa: Alta. El equipo tiene experiencia previa utilizando PostgreSQL.
+
+
+\subsubsection{MongoDB}
+Madurez: Alta. MongoDB es una base de datos NoSQL muy popular y ampliamente adoptada.
+Documentación: Alta. La documentación oficial y los recursos comunitarios son abundantes.
+Curva de aprendizaje: Baja. MongoDB es conocida por su flexibilidad y facilidad de uso.
+Experiencia previa: Media. Algunos miembros del equipo tienen experiencia previa con MongoDB.
+
+
+\subsubsection{Comparación de tecnologías}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Tecnología} & \textbf{Madurez} & \textbf{Documentación} & \textbf{Curva de aprendizaje} & \textbf{Experiencia previa} \\ \hline
+    PostgreSQL          & Alta            & Alta                   & Media                        & Alta                      \\ \hline
+    MongoDB             & Alta            & Alta                   & Baja                         & Media                     \\ \hline
+    \end{tabular}
+    \caption{Comparación de tecnologías}
+    \label{tab:comparacionTecnologias}
+\end{table}
+
+\subsubsubsection{Decisión final}
+
+Se decidió utilizar PostgreSQL para el sistema de base de datos debido a su robustez, la experiencia previa del 
+equipo y su capacidad para manejar datos estructurados y transacciones complejas.
+
+\subsection{Memoria Caché}
+
+Para la memoria caché, se consideraron las siguientes opciones:
+
+\subsubsection{Redis}
+Madurez: Alta. Redis es ampliamente adoptado y muy estable.
+Documentación: Alta. Existe una amplia documentación y soporte comunitario.
+Curva de aprendizaje: Baja. Redis es conocido por su simplicidad y eficiencia.
+Experiencia previa: Media. Algunos miembros del equipo tienen experiencia previa con Redis.
+
+\subsubsection{Memcached}
+Madurez: Alta. Memcached es una tecnología establecida y ampliamente utilizada.
+Documentación: Alta. Existe una buena cantidad de documentación y recursos disponibles.
+Curva de aprendizaje: Baja. Memcached es sencillo de implementar y utilizar.
+Experiencia previa: Nula. Ningún miembro del equipo tiene experiencia con Memcached.
+
+
+\subsubsection{Comparación de tecnologías}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Tecnología} & \textbf{Madurez} & \textbf{Documentación} & \textbf{Curva de aprendizaje} & \textbf{Experiencia previa} \\ \hline
+    Redis               & Alta            & Alta                   & Baja                         & Media                     \\ \hline
+    Memcached           & Alta            & Alta                   & Baja                         & Nula                      \\ \hline
+    \end{tabular}
+    \caption{Comparación de tecnologías}
+    \label{tab:comparacionTecnologias}
+\end{table}
+
+\subsubsection{Decisión final}
+Se decidió utilizar Redis para la memoria caché debido a su simplicidad, alta performance y la experiencia previa del equipo con 
+esta tecnología. Además, Redis ofrece características adicionales como la persistencia de datos, que pueden ser útiles para el 
+proyecto MRCC.

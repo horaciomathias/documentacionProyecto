@@ -1,0 +1,68 @@
+\section{Requerimientos no funcionales}\label{sec:requerimientosNoFuncionales}
+
+A partir de los requerimientos no funcionales, se definieron atributos de calidad que a se explicarán en el capítulo de Arquitectura: 
+
+\subsection{Availability}
+
+\textbf{RNF-01}\\
+El sistema deberá garantizar alta disponibilidad y resiliencia operativa, pudiendo funcionar 24/7 sin interrupciones (deben poder seguir gestionando el incidente en un ambiente local, 
+sin conexión a internet), incluso durante cortes de energía o de red. Debe incluir mecanismos de failover automático y redundancia de datos.
+
+
+\subsection{Performance}
+
+\textbf{RNF-02}\\
+El sistema debe ofrecer tiempos de respuesta rápidos y manejo eficiente de los recursos, especialmente en situaciones críticas y de alta carga operativa.
+
+
+\subsection{Security}
+
+\textbf{RNF-03}\\
+El sistema debe garantizar la privacidad de los datos en flujo. Esto incluye el cifrado de datos en tránsito para prevenir la interceptación y el acceso no autorizado.
+
+\textbf{RNF-04}\\
+Los usuarios deberán ser identificados, autenticados y autorizados cada vez que interactúen con la plataforma.
+
+\textbf{RNF-05}\\
+El sistema debe mantener la mayor superficie posible de la aplicación de manera privada.
+
+\textbf{RNF-06}\\
+Se requerirá uso de roles con distintos privilegios, para controlar el acceso a funcionalidades e información que el sistema maneja. Los roles del sistema son:
+\begin{itemize}
+    \item Administrador, acceso completo al sistema.
+    \item Operador, para gestionar los incidentes.
+    \item Jefe, para monitorear los incidentes
+\end{itemize}
+
+
+\subsection{Usability}
+
+\textbf{RNF-07}\\
+El sistema debe ser intuitivo y fácil de aprender, permitiendo a los usuarios entender rápidamente si el software es adecuado para sus necesidades.
+
+
+\subsection{Modifiability}
+
+\textbf{RNF-08}\\
+Los cambios de configuración deben poder realizarse sin causar interrupciones significativas en el servicio. Esto incluye la capacidad de actualizar, ajustar y 
+mejorar el sistema mientras se mantiene su disponibilidad y funcionalidad operativa.
+
+\textbf{RNF-09}\\
+El código y la arquitectura del sistema deben facilitar el mantenimiento y las futuras actualizaciones. Incluir documentación detallada y código fuente comentado 
+para apoyar operaciones continuas y desarrollo independiente por parte del equipo de TI de la Armada.
+
+
+\subsection{Deployability}
+
+\textbf{RNF-10}\\
+El sistema debe ser adaptable a diferentes entornos de hardware y software de manera efectiva, asegurando su operación continua y eficiente independientemente de las plataformas subyacentes.
+
+\subsection{Scalability}
+
+\textbf{RNF-11}\\
+Capacidad de escalar de manera eficiente para manejar incrementos en la carga de trabajo o en el número de incidentes gestionados simultáneamente sin degradar el rendimiento.
+
+\subsection{Interoperability}
+
+\textbf{RNF-12}\\
+El sistema debe poder integrarse con APIs externas para obtener datos meteorológicos y otros datos relevantes en tiempo real.
